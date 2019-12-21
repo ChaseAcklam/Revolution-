@@ -491,6 +491,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 280px;
+  z-index: 505;
 }
 
 .service {
