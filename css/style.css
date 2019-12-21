@@ -1,0 +1,1194 @@
+html {
+  font-size: 16px;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin:0;
+  padding:0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+/*-- Headsection ---------------------------------------------------------------*/
+
+.mobile_headsection {
+  display: none;
+}
+
+.headsection {
+  display: none;
+}
+
+.headsection_top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uppersection {
+  display: flex;
+  width: 100%;
+  background-color: #13314f;
+  height: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .05rem;
+  font-size: .8rem;
+}
+
+.head_contact {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+
+.lowersection {
+  background-color: rgb(45, 45, 45);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+}
+
+.logo img {
+  width: 285px;
+}
+/*-- Loader ---------------------------------------------------------------*/
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #13314f;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+.loader_logo {
+  margin-top: 5.25rem;
+  width: 15rem;
+  height: 15rem;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71299431-0b24db80-2342-11ea-96da-9259f9e3d3ec.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: red;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: white;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+
+
+
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+                display: none;
+
+    }
+
+
+
+    .loaded #loader-wrapper {
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+
+}
+
+.loaded-none #loader-wrapper {
+  display: none;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/*-- Body ---------------------------------------------------------------*/
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(45, 45, 45);
+}
+
+.banner {
+  width: 100%;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71197436-77bab000-2246-11ea-9202-9184bef1fda5.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -0px -350px;
+  background-repeat: no-repeat;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(45, 45, 45, 0.75);
+  color: white;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+.services_main {
+  background-color: rgb(45, 45, 45);
+  width: 100%;
+  height: 55rem;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71291821-7bbefe80-2328-11ea-940b-5c1d051f5036.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services_cap {
+  width: 70%;
+  height: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgb(200, 200, 200);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.serv_caption img {
+  width: 20px!important;
+}
+
+.buttons {
+  width: 100%;
+  height: 10rem;
+  background-color: rgba(255, 0, 0, 1);
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .red_button {
+    font-size: 1.5rem;
+    border: 2px solid white;
+    padding: 1.8rem;
+    font-weight: 300;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 350ms ease;
+  }
+
+  .red_button:hover {
+    background-color: #13314f;
+  }
+
+
+.DOBE_section {
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  height: 25rem;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Sponsors {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1300px;
+}
+
+.Sponsors img {
+  height: 6rem;
+  margin: 0px 3rem;
+}
+
+.service_row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+}
+
+.service {
+  width: 250px;
+  height: 280px;
+  margin: 0px 1.5rem;
+}
+
+.service img {
+  width: 100%;
+
+}
+
+.ware {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71291059-54673200-2326-11ea-9ef1-4e87398749cf.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.inter {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71295093-66999e00-232f-11ea-9938-ef27459c349e.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.truckload {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297880-170c9f80-233a-11ea-974b-a6ab4f2d6ea9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.flat {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297877-170c9f80-233a-11ea-9f15-f2940c6f6cf6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.LTL {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297878-170c9f80-233a-11ea-99b9-529db0d29dee.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.Parc {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297875-170c9f80-233a-11ea-9c0e-a52b80ad02c1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.EXP {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297876-170c9f80-233a-11ea-98d0-afb63380f8b5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.Final {
+  width: 250px;
+  height: 280px;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71297874-16740900-233a-11ea-95e1-b0ea8febdb0c.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.serv_caption {
+  width: 90%;
+  height: 3rem;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 1px 1px 8px rgb(100, 100, 100);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: .08rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.serv_caption p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: .25rem;
+}
+
+.serv_caption:hover p{
+  color: red;
+  border-color: red;
+}
+
+/*-- Scroll to Top button ---------------------------------------------------------------*/
+
+.scroll_dark {
+  opacity: 0;
+  position: fixed;
+  top: 92%;
+  left: 94%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.scroll_to_top {
+  display: flex;
+  position:fixed;
+  bottom:0;
+  right:0;
+  opacity: 1;
+  background-color: white;
+  border-radius: 3px;
+  padding: .4rem;
+  cursor: pointer;
+  z-index: 105;
+  margin:2rem;
+  transition: all 200ms ease;
+  justify-content: center;
+  align-items: center;
+}
+.scroll_to_top img {
+  width: 80%;
+}
+
+.scroll_to_top:hover {
+  background-color: #2d2d2d;
+}
+/*-- Footer ---------------------------------------------------------------*/
+  footer {
+    width: 100%;
+    height: 5rem;
+    background-color: #092b54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foot_content {
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .foot_content p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    margin: 0px 3rem;
+  }
+
+  .foot_content p img {
+    width: 30px;
+  }
+/*-- Span ---------------------------------------------------------------*/
+
+  .width-stock {
+    width: 1300px;
+  }
+
+  .center-column {
+    display: flex;
+    align-items: center;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+/*-- Navigation ---------------------------------------------------------------*/
+
+/* Main Template Styles */
+
+#main {
+  background: 		<!-- Color :: Bold-Pro Interior Background Color :: #ffffff -->;
+	z-index: 			991;
+	position:			relative;
+	overflow:			hidden;
+	}
+#main a {
+	cursor: 			pointer;
+	}
+#main table {
+	max-width: 			100%!important;
+	}
+#homepage table {
+	max-width: 			100%!important;
+	}
+#homepageMain {
+	clear: 				both;
+	display: 			<!-- InitialHomepageDisplay -->;
+	width: 				100%;
+	}
+#homepage {
+	overflow:			hidden;
+	}
+.customPage {
+	clear: 				both;
+	display: 			none;
+	width: 				100%;
+	}
+.customPageContent {
+	overflow:			hidden;
+	}
+.interior {
+    position: relative;
+    /* margin-bottom: 10px; */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+}
+.interior input[type=checkbox] {
+  display: inline ;
+}
+.center_box {
+	padding:			0px;
+	}
+.side {
+	position:			relative;
+	float:				right;
+	width:				324px;
+	}
+.sub-content {
+	padding: 			10px;
+	margin:				0;
+	color:				#59595d;
+	background-color: 	#d3e1e3;
+	width: 				100%;
+	height:				213px;
+	bottom:				0;
+	font-size:			13px;
+	}
+.sub-content td {
+	font-size:			13px;
+	color:				#4a4a4a;
+	}
+
+
+/* Header Area Styles */
+
+#teamName {
+	font-size: 			16px;
+	font-weight:		bold;
+	color: 				<!-- Color :: Bold-Pro Group Name Font Color :: #ffffff -->;
+	text-align:			left;
+	position: 			absolute;
+	margin-left:		20px;
+	margin-top: 		5px;
+	text-shadow: 		2px 2px 3px #000000;
+	}
+
+
+
+
+
+
+/* Navigation Styles */
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	text-decoration: 	none;
+	color: 				<!-- Color :: Mobile Navigation Icon Color :: #000000 -->;
+	text-align:	 		center;
+	display: 			none;
+	}
+/*Hide checkbox*/
+input[type=checkbox]{
+	display: 			none;
+	}
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #nav{
+	display: 			inline;
+	}
+.control_panel {
+  width: auto;
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+	}
+#controlPanel {
+  margin-top: 1rem;
+  list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+width: 100%;
+margin-right: 8rem;
+	}
+
+  #controlPanel ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: flex-start;
+  }
+
+  #controlPanel li{
+    color: white;
+  }
+
+ul #nav {
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#navitem a {
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(10, 10, 10);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left:1.5rem;
+  padding-right: 1.5rem;
+  list-style: none;
+  color: #44d400;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  transition: all 400ms ease;
+  margin: 1.5;
+}
+
+#navitem a:hover {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+#navitem {
+  transition: all 400ms ease;
+}
+
+
+#controlPanel p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+	}
+#nav{
+  height: 2rem;
+  transition: all 400ms ease;
+	}
+
+#nav li{
+  min-width: 6rem;
+  z-index: 3;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(30, 29, 27);
+  transition: all 300ms ease;
+	}
+
+.headsection #nav a {
+  color: black;
+}
+
+#nav a {
+  font-size: 13px;
+  letter-spacing: .04rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  padding-top: .30rem;
+  padding-bottom: .2rem;
+  font-family:  'Montserrat', sans-serif;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+#nav a:hover{
+  color: rgb(226, 38, 63);
+	}
+
+.activeNav {
+	text-decoration: none !important;
+}
+
+
+/*--- DROPDOWN ---*/
+#nav ul{
+
+  margin-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+	background-color: rgb(10, 10, 10); /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+	background-color: rgb(10, 10, 10); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:			none;
+	position:			relative;
+  bottom: 0;
+	display: none; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	padding:			0; /* This gets rid of any alignment issues */
+  width: 110px;
+	}
+#nav ul li{
+  background-color: white;
+  z-index: 3;
+	padding-top:		0px; /* Introducing a padding between the li and the a give the illusion spaced items */
+  border: none;
+  width: 100%;
+	}
+#nav ul li a{
+  color: black;
+  background-color: white;
+  font-size: 14.4px;
+  width: 70%;
+  position: relative;
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+  padding-top: .60rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid white;
+  /* Stop text wrapping and creating multi-line dropdown items */
+	}
+#nav li:hover ul{ /* Display the dropdown on hover */
+	display: flex; /* Bring back on-screen when needed */
+	}
+#nav li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	text-decoration:	none;
+	}
+#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	  background-color: white;
+        letter-spacing: .08rem;
+	text-decoration:	none;
+  text-transform: capitalize;
+  border-bottom:1px solid lightgray;
+	color: black;
+	font-size:			80%;
+  font-family: 'Rubik',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+#nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	  background-color: rgb(208, 50, 50);
+	color: white;
+	text-decoration:	underline;
+  transition: all 300ms ease;
+  border-bottom:rgb(255, 255, 255);
+  font-family: 'Rubik',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+
+#nav ul li a:hover {
+  border-bottom:rgb(255, 255, 255);
+  background-color: rgb(208, 50, 50);
+  color: white;
+  transition: all 300ms ease;
+}
+
+/* -- bottom styles -- */
+
+
+
+
+/*FT NEW CSS FOR CART*/
+#leftNav {
+  margin-right: 25px;
+}
+.store_item_right_column select {
+  max-width: 200px;
+}
+#storeItems tr {
+  display: block;
+}
+#cart {
+  background: none repeat scroll 0 0 #f2f2f2 !important;
+  border: 1px solid #e1e1e1 !important;
+  border-radius: 10px;
+  padding: 20px !important;
+  width: 93% !important;
+}
+#cart tr td {
+  padding: 0 0 10px;
+}
+#viewCartButton a {
+  background: #BC8124 !important;
+  border: 1px solid #BE7F1B;
+  padding: 5px 15px !important;
+}
+.addToCartButton {
+  background: #bc8124 !important;
+  color: #fff !important;
+  font-size: 15px;
+  padding: 7px 15px !important;
+}
+.store_item_left_column img {
+  clear: both;
+}
+.billingInformationLine span, .billingInformationLine div {
+  display: block;
+  float: none !important;
+  padding: 7px 0 !important;
+  width: 100% !important;
+}
+.shippingInformationLine {
+  display: block;
+  float: none !important;
+  padding: 7px 0 !important;
+  width: 100% !important;
+}
+@media screen and (max-width : 480px){
+	#storeItems td {
+  		display: block;
+  		float: left;
+	}
+}
+
+.storeItemCustomField {
+  color: #666 !important;
+  margin: 0 !important;
+}
+.storeItemShoppingOptions {
+  color: #666 !important;
+}
+.storeItemDescription {
+  color: #777;
+  font-size: 14px;
+  line-height: 20px;
+}
+.cart_item_right_column {
+  vertical-align: inherit !important;
+}
+.store_item_right_column select {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #555;
+  font-size: 14px;
+  margin: 3px 0 0;
+  max-width: 200px;
+  padding: 3px 2px 4px 5px;
+}
+.storeItemName {
+  font-family: helvetica neue,helvetica,arial,verdana;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: normal;
+}
+.storeItemPrice {
+  color: #bc8124;
+  font-family: georgia;
+  font-size: 19px;
+  font-weight: normal !important;
+  margin-bottom: 20px;
+}
+.cart_item_table {
+  color: #666;
+  margin-left: -5px;
+}
+.addToCartButton:hover {
+  color: #e1e1e1 !important;
+  text-decoration: none !important;
+}
+.checkoutButton, #checkoutButton {
+  background: #bc8124 !important;
+  color: #fff !important;
+  font-size: 14px;
+  padding: 6px 15px !important;
+}
+#updateCartButton {
+  background: #e1e1e1 !important;
+  border: 1px solid #ccc;
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+}
+#returnToStoreButton {
+  background: #e1e1e1 !important;
+  border: 1px solid #ccc;
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+}
+.container {
+	margin-left:	auto;
+	margin-right:	auto;
+	width:	1200px;
+	display: inline-block;
+}
+a.button {
+    padding: 20px 30px;
+    background-color: #F60;
+    border-radius: 30px;
+    margin-top: 30px;
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+}
+a.button:hover {
+	background-color: #fff;
+	color:	#f60;
+}
+.orange-bg {
+	width: 100%;
+	background-color:	#f60;
+	padding:	20px 0px;
+	color:	#fff;
+	text-align: left;
+}
+.white-bg {
+	width: 100%;
+	background-color:	#fff;
+	padding:	20px 0px;
+	color:	#333;
+	text-align: left;
+}
+.about-bg {
+	width: 100%;
+	background-size:	100%;
+	background-image: url('https://app.salesdrip.com/users/myteam42369/Media686.jpg');
+	padding:	20px 0px;
+	color:	#333;
+	text-align: left;
+}
+.about-bg p {
+	line-height: 2;
+}
+.white {
+	color:	#fff;
+}
+.orange {
+	color:	#f60;
+}
+ul.white-list li {
+    list-style-position: inside;
+    background: url('https://app.salesdrip.com/users/myteam42369/Media682.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 40px;
+    list-style-type: none;
+    padding-bottom: 0px;
+    background-size: 40px;
+        font-size: 20px;
+    padding: 10px 0px 10px 40px;
+}
+.white-list {
+	    margin-left: -40px;
+}
+a.button2 {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #f60;
+    font-weight: 500;
+    margin-top: 30px;
+    display: inline-block;
+}
+a.button2:hover {
+	background-color: #f60;
+	color:	#fff;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.5%;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}r
