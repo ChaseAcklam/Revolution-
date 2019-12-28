@@ -37,6 +37,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 30;
 }
 
 .uppersection {
@@ -59,16 +60,44 @@ p {
 }
 
 .lowersection {
-  background-color: rgb(45, 45, 45);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 95px;
+  border-bottom: 1px solid rgb(130, 130, 130);
 }
 
 .logo img {
   width: 285px;
+}
+
+.lefthead {
+
+}
+
+.righthead {
+  margin-left: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login {
+
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 2rem;
+  border-left: 1px solid rgb(130, 130, 130);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.login a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
 }
 /*-- Loader ---------------------------------------------------------------*/
 .chromeframe {
@@ -338,15 +367,56 @@ p {
 
 .banner {
   width: 100%;
-  background-image: url("https://user-images.githubusercontent.com/47538587/71197436-77bab000-2246-11ea-9202-9184bef1fda5.jpeg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: -0px -350px;
-  background-repeat: no-repeat;
   height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slide_show {
+  width: 100%;
+  height: 35rem;
+}
+
+.mySlides {
+  width: 100%;
+}
+
+.slide_one {
+  width: 100%;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media32.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -0px -350px;
+  background-repeat: no-repeat;
+}
+
+.slide_two {
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media29.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide_three {
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media30.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -0px -350px;
+  background-repeat: no-repeat;
+}
+.slide_four {
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media28.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -0px -300px;
+  background-repeat: no-repeat;
+}
+.slide_five {
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media31.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -0px -250px;
+  background-repeat: no-repeat;
 }
 
 .banner p {
@@ -355,11 +425,22 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(45, 45, 45, 0.75);
+  background-color: rgba(45, 45, 45, 0.65);
   color: white;
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
+}
+
+.about_banner {
+  width: 100%;
+  background-image: url("https://user-images.githubusercontent.com/47538587/71312833-d0c04a80-23e4-11ea-8c39-1c5a2eb86229.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .services_main {
@@ -409,22 +490,66 @@ p {
 }
 
 .services_cap {
-  width: 70%;
+  width: 1300px;
   height: 10rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: rgb(200, 200, 200);
-  font-size: 2rem;
+  color: rgb(240, 240, 240);
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
+  z-index: 505;
+}
+
+.services_cap img {
+  width: 9rem;
+  padding-right: 1rem;
+  margin-left: 3rem;
 }
 
 .serv_caption img {
   width: 20px!important;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10.5s;
+  animation-name: fade;
+  animation-duration: 10.5s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+   opacity:0;
+ }
+ 35% {
+ opacity:1;
+ }
+ 85% {
+ opacity:1;
+ }
+ 100% {
+ opacity:0;
+ }
+}
+
+@keyframes fade {
+  0% {
+   opacity:0;
+ }
+ 35% {
+ opacity:1;
+ }
+ 85% {
+ opacity:1;
+ }
+ 100% {
+ opacity:0;
+ }
 }
 
 .buttons {
@@ -480,7 +605,7 @@ p {
 }
 
 .Sponsors img {
-  height: 6rem;
+  height: 4rem;
   margin: 0px 3rem;
 }
 
@@ -806,24 +931,25 @@ input[type=checkbox]:checked ~ #nav{
 	display: 			inline;
 	}
 .control_panel {
-  width: auto;
+  width: 100%;
   margin-top: 2rem;
+  padding-right: 2rem;
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   margin: 0;
+  height: 100%;
 	}
 #controlPanel {
-  margin-top: 1rem;
+  width: 100%;
   list-style: none;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: row;
-width: 100%;
-margin-right: 8rem;
+height: 100%;
 	}
 
   #controlPanel ul {
