@@ -72,6 +72,22 @@ p {
   width: 285px;
 }
 
+.home_icon img{
+  width: 1.5rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+#icon_home_white {
+  z-index: 234;
+  position: absolute;
+}
+
+.home_icon:hover #icon_home_white {
+  display: none;
+}
+
 .lefthead {
 
 }
@@ -85,19 +101,24 @@ p {
 }
 
 .login {
-
   font-family: 'Montserrat', sans-serif;
   padding-left: 2rem;
   border-left: 1px solid rgb(130, 130, 130);
   height: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: .5rem;
 }
 
 .login a {
   color: white;
   font-weight: 600;
   font-size: 1rem;
+  transition: all 300ms ease;
+}
+
+.login a:hover {
+  color: red;
 }
 /*-- Loader ---------------------------------------------------------------*/
 .chromeframe {
@@ -392,7 +413,7 @@ p {
 }
 
 .slide_two {
-  background-image: url("https://app.salesdrip.com/users/myteam46301/Media29.jpg");
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media38.png");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -642,10 +663,10 @@ p {
   align-items: flex-end;
 }
 
-.inter {
+.drayage {
   width: 220px;
   height: 250px;
-  background-image: url("https://user-images.githubusercontent.com/47538587/71295093-66999e00-232f-11ea-9938-ef27459c349e.png");
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media42.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -692,10 +713,10 @@ p {
   justify-content: center;
   align-items: flex-end;
 }
-.EXP {
+.reefer {
   width: 220px;
   height: 250px;
-  background-image: url("https://user-images.githubusercontent.com/47538587/71302182-12a5ae00-235d-11ea-8657-481ee4e674ba.png");
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media40.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -706,6 +727,26 @@ p {
   width: 220px;
   height: 250px;
   background-image: url("https://user-images.githubusercontent.com/47538587/71302183-12a5ae00-235d-11ea-9669-49caf3a6cb23.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.power_only {
+  width: 220px;
+  height: 250px;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media39.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.tms {
+  width: 220px;
+  height: 250px;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media41.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -762,11 +803,10 @@ p {
   bottom:0;
   right:0;
   opacity: 1;
-  background-color: #2d2d2d;
   border-radius: 3px;
-  padding: .4rem;
   cursor: pointer;
   z-index: 105;
+  padding: .4rem;
   margin:1rem;
   transition: all 200ms ease;
   justify-content: center;
@@ -778,7 +818,8 @@ p {
 }
 
 .scroll_to_top:hover {
-  background-color: #222;
+  padding: .4rem;
+  border: 1px solid white;
 }
 /*-- Footer ---------------------------------------------------------------*/
   footer {
@@ -811,7 +852,7 @@ p {
 /*-- Span ---------------------------------------------------------------*/
 
   .width-stock {
-    width: 1300px;
+    width: 1200px;
   }
 
   .center-column {
@@ -1007,7 +1048,6 @@ ul #nav {
 	}
 
 #nav li{
-  min-width: 6rem;
   z-index: 3;
   text-align: left;
   display: flex;
@@ -1023,17 +1063,14 @@ ul #nav {
 }
 
 #nav a {
-  font-size: 13px;
+  font-size: .9rem;
   letter-spacing: .04rem;
-  padding-left: 1rem;
-  padding-right: 3rem;
-  padding-top: .30rem;
-  padding-bottom: .2rem;
   font-family:  'Montserrat', sans-serif;
   list-style: none;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  width: 9rem;
 }
 
 
@@ -1048,8 +1085,8 @@ ul #nav {
 
 /*--- DROPDOWN ---*/
 #nav ul{
-
-  margin-left: 1rem;
+  margin-top: 2.85rem;
+  margin-right: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1074,13 +1111,14 @@ ul #nav {
   color: black;
   background-color: white;
   font-size: 14.4px;
-  width: 70%;
+  width: 100%;
   position: relative;
   padding-left: 1.5rem;
-  padding-right: 3rem;
+  padding-right: 3.5rem;
   padding-top: .60rem;
   padding-bottom: .6rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid grey;
+
   /* Stop text wrapping and creating multi-line dropdown items */
 	}
 #nav li:hover ul{ /* Display the dropdown on hover */
@@ -1094,25 +1132,28 @@ ul #nav {
         letter-spacing: .08rem;
 	text-decoration:	none;
   text-transform: capitalize;
-  border-bottom:1px solid lightgray;
 	color: black;
 	font-size:			80%;
   font-family: 'Rubik',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 #nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
-	  background-color: rgb(208, 50, 50);
-	color: white;
-	text-decoration:	underline;
+	color: red;
   transition: all 300ms ease;
-  border-bottom:rgb(255, 255, 255);
   font-family: 'Rubik',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 #nav ul li a:hover {
-  border-bottom:rgb(255, 255, 255);
-  background-color: rgb(208, 50, 50);
-  color: white;
-  transition: all 300ms ease;
+  color: red;
+}
+
+#Page7Link {
+  border-top: 5px solid red;
+}
+#Page17Link {
+  border-top: 5px solid red;
+}
+#Page19Link {
+  border-top: 5px solid red;
 }
 
 /* -- bottom styles -- */
