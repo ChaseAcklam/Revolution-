@@ -107,7 +107,6 @@ p {
   height: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: .5rem;
 }
 
 .login a {
@@ -600,6 +599,62 @@ p {
     background-color: #13314f;
   }
 
+.testimonials  {
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  color: black;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 25rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.test_caption {
+  height: 5rem;
+  width: 100%;
+  background-color: red;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotlight {
+  width: 100%;
+  height: 15rem;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media69.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.test_row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.testimonial {
+  width: 30%;
+  height: 10rem;
+  padding: 0px 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
 
 .DOBE_section {
   width: 100%;
@@ -608,13 +663,27 @@ p {
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
-  height: 25rem;
+  height: 20rem;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   flex-direction: column;
   align-items: center;
   z-index: 501;
+}
+
+.down_arrow {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.8rem;
+}
+
+.down_arrow img {
+  width: 3rem;
 }
 
 .Sponsors {
@@ -783,6 +852,166 @@ p {
 .serv_caption:hover p{
   color: red;
   border-color: red;
+}
+/*-- Services ---------------------------------------------------------------*/
+
+.services_banner {
+  width: 100%;
+  height: 25rem;
+}
+
+.truckload_main {
+  width: 100%;
+  height: 20rem;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media78.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+.shaded {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 25, 25, 0.8);
+}
+
+.service_content {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.directory {
+  width: 100%;
+  height: 1.5rem;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: .02rem;
+}
+
+.directory img {
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+.service_info {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.info_title {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info_title img {
+  width: 10rem;
+}
+
+.info {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.content_holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serv_list {
+  margin-top: 5rem;
+  width: 20%;
+  height: 100%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  
+}
+
+.buttons_services {
+  margin-top: 5rem;
+  width: 20%;
+  height: 100%;
+  border-left: 1px solid grey;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  padding-left: 4rem;
+}
+
+.buttons_services p {
+  text-align: center;
+}
+
+.buttons_services img {
+  width: 1.5rem;
+}
+
+.serv_button {
+  font-weight: 400;
+  padding: 1rem;
+  width: 18rem;
+  font-size: 1.5rem;
+  text-align: left;
+  margin: .5rem 0;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media80.png");
+  background-repeat: no-repeat;
+  background-position: 210% 100%;
+  border-bottom: 1px solid red;
+  cursor: pointer;
+  transition: all 400ms ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side_arrow {
+  color: rgba(255, 255, 255, 0.0);
+  font-size: 1.5rem;
+  transition: all 400ms;
+}
+
+.serv_button:hover {
+  background-position: 100%;
+}
+
+.serv_button:hover .side_arrow {
+  color: white;
 }
 
 /*-- Scroll to Top button ---------------------------------------------------------------*/
@@ -1050,6 +1279,7 @@ ul #nav {
 #nav li{
   z-index: 3;
   text-align: left;
+  margin-top: .5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1085,7 +1315,7 @@ ul #nav {
 
 /*--- DROPDOWN ---*/
 #nav ul{
-  margin-top: 2.85rem;
+  margin-top: 2.35rem;
   margin-right: 2rem;
   display: flex;
   justify-content: flex-start;
@@ -1106,6 +1336,7 @@ ul #nav {
 	padding-top:		0px; /* Introducing a padding between the li and the a give the illusion spaced items */
   border: none;
   width: 100%;
+  margin-top: 0;
 	}
 #nav ul li a{
   color: black;
@@ -1152,7 +1383,7 @@ ul #nav {
 #Page17Link {
   border-top: 5px solid red;
 }
-#Page19Link {
+#Page5Link {
   border-top: 5px solid red;
 }
 
