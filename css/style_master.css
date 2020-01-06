@@ -860,6 +860,86 @@ p {
   height: 25rem;
 }
 
+.carriers_main {
+  width: 100%;
+  height: 25rem;
+  background-image: url("https://app.salesdrip.com/users/myteam46301/Media113.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.movie_darker {
+  display: none;
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  background-color: rgba(20, 20, 20, .9);
+  z-index: 20;
+}
+
+.movie_group {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.movie_group video {
+  margin-top: 5rem;
+  width: 100%;
+  cursor: pointer;
+  z-index: 25
+}
+
+.triggerGroup {
+  margin-top: 5rem;
+  width: 55rem;
+  height: 35rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index:900;
+  position: absolute;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.movie_overlay_blue {
+  margin-top: 26rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 25;
+}
+
+.movie_overlay_blue img {
+  width: 55%;
+}
+
+
+.movie_overlay {
+  margin-top: 26rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 26;
+}
+
+.movie_overlay img {
+    width: 55%;
+}
+
 .truckload_main {
   width: 100%;
   height: 15rem;
@@ -965,6 +1045,16 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(25, 25, 25, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shaded p {
+  color: white;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 
 .service_content {
@@ -1701,6 +1791,104 @@ a.button2:hover {
 	color:	#fff;
 }
 
+@media only screen and (max-width: 2640px) {
+
+  .movie_overlay_blue {
+    margin-top: 36rem;
+  }
+
+  .movie_overlay {
+    margin-top: 36rem;
+  }
+
+}
+
+@media only screen and (max-width: 2440px) {
+
+  .movie_overlay_blue {
+    margin-top: 34rem;
+  }
+
+  .movie_overlay {
+    margin-top: 34rem;
+  }
+
+}
+
+@media only screen and (max-width: 2240px) {
+
+  .movie_overlay_blue {
+    margin-top: 32rem;
+  }
+
+  .movie_overlay {
+    margin-top: 32rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 2040px) {
+
+  .movie_overlay_blue {
+    margin-top: 30rem;
+  }
+
+  .movie_overlay {
+    margin-top: 30rem;
+  }
+
+}
+
+@media only screen and (max-width: 1840px) {
+
+  .movie_overlay_blue {
+    margin-top: 28rem;
+  }
+
+  .movie_overlay {
+    margin-top: 28rem;
+  }
+
+}
+
+@media only screen and (max-width: 1640px) {
+
+  .movie_overlay_blue {
+    margin-top: 26rem;
+  }
+
+  .movie_overlay {
+    margin-top: 26rem;
+  }
+
+}
+
+@media only screen and (max-width: 1540px) {
+
+  .movie_overlay_blue {
+    margin-top: 24rem;
+  }
+
+  .movie_overlay {
+    margin-top: 24rem;
+  }
+
+}
+
+@media only screen and (max-width: 1380px) {
+
+  .movie_overlay_blue {
+    margin-top: 22rem;
+  }
+
+  .movie_overlay {
+    margin-top: 22rem;
+  }
+
+}
+
+
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
@@ -1733,4 +1921,4 @@ only screen and (min-device-pixel-ratio: 1.5){
     overflow-x:hidden;
   }
 
-}r
+}
